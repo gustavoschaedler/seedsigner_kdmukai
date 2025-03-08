@@ -24,7 +24,7 @@ class Renderer(ConfigurableSingleton):
         cls._instance = renderer
 
         # Eventually we'll be able to plug in other display controllers
-        renderer.disp = ST7789(width=240, height=320)
+        renderer.disp = ST7789(width=240, height=320, rotation=3)
 
         renderer.canvas_width = renderer.disp.width
         renderer.canvas_height = renderer.disp.height
